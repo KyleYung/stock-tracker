@@ -1,6 +1,12 @@
+import { useEffect } from "react";
 import { Text, View } from "react-native";
+import { initDatabase } from "../../src/db/database";
 
 export default function HomeScreen() {
+  useEffect(() => {
+    initDatabase();
+  }, []);
+
   return (
     <View
       style={{
